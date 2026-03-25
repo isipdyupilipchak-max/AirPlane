@@ -1,0 +1,1441 @@
+/* Обнуление стилей и базовые настройки */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #ffffff;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+/* Стили для шапки - ИСПРАВЛЕННЫЕ */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #ffffff; /* Белый фон вместо прозрачного */
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333; /* Цвет текста вместо градиента */
+}
+
+.logo-img {
+    width: 70px; /* Размер логотипа */
+
+    object-fit: contain; /* Сохраняет пропорции */
+}
+
+.logo-text {
+    background: linear-gradient(90deg, #fe3a04 0%, #ffa90d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.nav-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, #fe3a04 0%, #ffa90d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: #fe3a04;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #fe3a04, #ffa90d);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    width: 25px;
+    height: 3px;
+    background: #333;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Стили для герой-секции с параллакс эффектом */
+.hero-parallax {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    padding: 0 20px;
+    z-index: 1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+
+.hero-title span {
+    background: linear-gradient(90deg, #ffa90d, #fe3a04);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.cta-button {
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ffa90d 0%, #fe3a04 100%);
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(254, 58, 4, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(254, 58, 4, 0.4);
+    background: linear-gradient(90deg, #fe3a04 0%, #ffa90d 100%);
+}
+
+
+/* НОВЫЕ СТИЛИ ДЛЯ БЛОКА "О НАС" С ПАРАЛЛАКСОМ */
+.about-new {
+    padding: 100px 0;
+    background: #fff;
+    position: relative;
+}
+
+.about-new-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-new-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    background: linear-gradient(90deg, #fe3a04 0%, #ffa90d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-new-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.about-new-image-parallax {
+    position: relative;
+    height: 700px; /* Фиксированная высота для параллакса */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-new-parallax-bg {
+    position: absolute;
+    top: -500px; /* Обрезка сверху для параллакса */
+    left: 0;
+    width: 100%;
+    height: calc(100% + 100px); /* Высота + 200px для скроллинга */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-image: url('images/image 5.jpg');
+}
+
+/* Стили для секции "О нас" */
+.about {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.about-card {
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.about-card i {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #63a1ff, #4503cb);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Стили для секции "Направления" с фоновыми изображениями */
+.destinations {
+    padding: 100px 0;
+}
+
+.destinations h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.destination-card {
+    position: relative;
+    height: 400px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover .card-bg {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5rem;
+    color: #fff;
+    z-index: 1;
+}
+
+.card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    margin-bottom: 1rem;
+    opacity: 0.9;
+}
+
+.card-price {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffa90d;
+    margin-bottom: 1rem;
+}
+
+.card-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #63a1ff 0%, #4503cb 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+}
+
+.card-button:hover {
+   /* Уберите смену градиента */
+    background: linear-gradient(90deg, #63a1ff 0%, #4503cb 100%);
+    /* Добавьте другие эффекты */
+    filter: brightness(1.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(99, 161, 255, 0.4);
+}
+
+/* Стили для секции "Услуги" */
+.services {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.services h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.service-item {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-item i {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #ffa90d, #fe3a04);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.service-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.service-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+
+
+.promo-content {
+    text-align: center;
+    color: #fff;
+    max-width: 600px;
+    padding: 0 20px;
+    z-index: 1;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.promo-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.promo-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+.promo-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.promo-button:hover {
+    background: #fff;
+    color: #333;
+}
+
+/* Стили для секции "Отзывы" */
+.testimonials {
+    padding: 100px 0;
+    background-color: #fff;
+}
+
+.testimonials h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #333;
+}
+
+.testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #63a1ff 0%, #4503cb 100%);
+    color: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(99, 161, 255, 0.3);
+}
+
+.testimonial-slide p {
+    font-size: 1.2rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.client-info img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+}
+
+.client-info span {
+    font-weight: 600;
+}
+
+/* Стили для секции "Контакты и бронирование" с фоновым изображением */
+.contact-booking {
+    position: relative;
+    padding: 100px 0;
+}
+
+.contact-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.contact-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.contact-booking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.booking-form, .contact-info {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.booking-form h2, .contact-info h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e9ecef;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #63a1ff;
+}
+
+.form-group.double {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #ffa90d 0%, #fe3a04 100%);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-button:hover {
+    background: linear-gradient(90deg, #fe3a04 0%, #ffa90d 100%);
+    transform: translateY(-2px);
+}
+
+.contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.contact-info i {
+    width: 20px;
+    color: #fe3a04;
+}
+
+
+ 
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+    color: #ffffff;
+}
+
+.social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #63a1ff, #4503cb);
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/* Стили для подвала */
+.footer {
+    background: linear-gradient(135deg, #63a1ff 0%, #4503cb 100%);
+    color: #fff;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background: linear-gradient(135deg, #fff, #f8f9fa);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        padding: 2rem 0;
+        gap: 0;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1rem 0;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .contact-booking-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group.double {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+/* Увеличение размеров шрифта для всего сайта */
+body {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Стили для улучшенного героя */
+.hero-parallax {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    z-index: -1;
+}
+
+.hero-content {
+    text-align: center;
+    color: #fff;
+    max-width: 900px;
+    padding: 0 30px;
+    z-index: 1;
+    text-shadow: 0 2px 15px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.hero-title span {
+    background: linear-gradient(90deg, #ffa90d, #fe3a04);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: none;
+}
+
+.hero-description {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.cta-button {
+    padding: 18px 50px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    background: linear-gradient(90deg, #ffa90d 0%, #fe3a04 100%);
+    color: #fff;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(254, 58, 4, 0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px rgba(254, 58, 4, 0.5);
+}
+
+/* Новый блок "О нас" после главной страницы */
+.about-new {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.about-new-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-new-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+    background: linear-gradient(90deg, #fe3a04 0%, #ffa90d 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.about-new-content p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+}
+
+.about-new-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-new-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Увеличенные карточки направлений */
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.destination-card {
+    position: relative;
+    height: 500px; /* Увеличено на 100px */
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.card-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover .card-bg {
+    transform: scale(1.1);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    color: #fff;
+    z-index: 1;
+}
+
+.card-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.card-content p {
+    font-size: 1.1rem;
+    margin-bottom: 1.2rem;
+    opacity: 0.95;
+    line-height: 1.5;
+}
+
+.card-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #ffa90d;
+    margin-bottom: 1.2rem;
+}
+
+/* Исправленные кнопки без смены градиента */
+.card-button {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(90deg, #63a1ff 0%, #4503cb 100%);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(99, 161, 255, 0.4);
+}
+
+.card-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.card-button:hover::after {
+    transform: translateX(0);
+}
+/* Исправленные стили для промо-блока с параллакс эффектом */
+.promo-parallax {
+    position: relative;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Убираем скролл */
+
+    
+}
+
+.promo-parallax-bg {
+    position: absolute;
+    top: -1900px;
+    left: 0;
+    width: 100%;
+height: calc(100% + 150px);
+    background-image: url('images/image 11.jpg');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+
+}
+
+/* Затемнение фона */
+.promo-parallax-bg::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25); /* Затемнение */
+    z-index: 1;
+}
+
+.promo-content {
+    text-align: center;
+    color: #fff;
+    max-width: 700px;
+    padding: 0 30px;
+    z-index: 2; /* Поверх затемнения */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+}
+
+.promo-content h2 {
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.promo-content p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    opacity: 0.95;
+    font-weight: 500;
+}
+
+.promo-button {
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+    transition: all 0.3s ease;
+    z-index: 2;
+    position: relative;
+}
+
+.promo-button:hover {
+    background: #fff;
+    color: #333;
+    transform: translateY(-2px);
+}
+
+
+/* Исправленные отзывы с работающими изображениями */
+.testimonials-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #63a1ff 0%, #4503cb 100%);
+    color: #fff;
+    padding: 3rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(99, 161, 255, 0.3);
+}
+
+.testimonial-slide p {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.client-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.client-info img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.client-info span {
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* Улучшенный подвал */
+.footer {
+    background: linear-gradient(135deg, #63a1ff 0%, #4503cb 100%);
+    color: #fff;
+    padding: 2.5rem 0 2rem;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.footer p {
+    margin-bottom: 0.5rem; /* Уменьшены отступы */
+    opacity: 0.9;
+    line-height: 1.4;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+    font-size: 1rem;
+}
+
+.footer-links a:hover {
+    opacity: 0.8;
+}
+
+.footer-copy {
+    opacity: 0.7;
+    font-size: 0.9rem;
+    margin-top: 0.4rem;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .hero-description {
+        font-size: 1.2rem;
+    }
+    
+    .about-new-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+
+
+
+/* ===== МЕДИА-ЗАПРОСЫ ДЛЯ АДАПТИВНОСТИ ===== */
+
+/* Для экранов до 768px (планшеты и мобильные) */
+@media (max-width: 768px) {
+    /* Навигация - вертикальное меню */
+    .nav-menu {
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 1rem 0;
+    }
+
+    .nav-item {
+        padding: 15px;
+        text-align: center;
+        width: 100%;
+    }
+
+    /* Герой-секция */
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-description {
+        font-size: 1.1rem;
+    }
+
+    .cta-button {
+        padding: 12px 30px;
+        font-size: 1rem;
+    }
+
+    /* Сетки */
+    .about-new-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .about-grid,
+    .destinations-grid,
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-booking-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    /* Карточки направлений */
+    .destination-card {
+        height: 350px;
+    }
+
+    /* Текст */
+    main {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    /* Изображения */
+    .about-new-image-parallax {
+        height: 400px;
+    }
+
+    .about-new-parallax-bg {
+        background-attachment: scroll; /* Отключаем параллакс на мобильных */
+    }
+}
+
+/* Для экранов до 480px (мобильные) */
+@media (max-width: 480px) {
+    /* Заголовки */
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .about-new-content h2,
+    .about h2,
+    .destinations h2,
+    .services h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Навигация */
+    .nav-item {
+        padding: 12px;
+    }
+
+    .navbar {
+        padding: 1rem;
+    }
+
+    /* Карточки */
+    .destination-card {
+        height: 300px;
+    }
+
+    .card-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .card-content p {
+        font-size: 1rem;
+    }
+
+    /* Формы */
+    .booking-form,
+    .contact-info {
+        padding: 1.5rem;
+    }
+
+    /* Подвал */
+    .footer {
+        font-size: 12px;
+        padding: 2rem 0;
+    }
+
+    .footer-logo {
+        font-size: 1.5rem;
+    }
+
+    /* Отступы контейнера */
+    .container {
+        padding: 0 15px;
+    }
+}
+
+/* Для очень маленьких экранов (до 360px) */
+@media (max-width: 360px) {
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        height: 280px;
+    }
+
+    .about-card,
+    .service-item {
+        padding: 1.5rem 1rem;
+    }
+}
+
+/* Улучшенная адаптивность изображений */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Адаптивные шрифты с относительными единицами */
+body {
+    font-size: 1rem; /* Базовый размер шрифта */
+}
+
+.hero-title {
+    font-size: clamp(1.8rem, 5vw, 3.5rem); /* Адаптивный размер */
+}
+
+.about-new-content h2,
+.about h2,
+.destinations h2,
+.services h2 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Адаптивная мобильная навигация */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Улучшения для touch-устройств */
+@media (hover: none) and (pointer: coarse) {
+    /* Увеличиваем области касания для мобильных */
+    .nav-link,
+    .card-button,
+    .cta-button,
+    .form-button {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Отключаем ховер-эффекты на тач-устройствах */
+    .destination-card:hover {
+        transform: none;
+    }
+
+    .card-button:hover {
+        transform: none;
+    }
+}
+
+/* Оптимизация производительности для мобильных */
+@media (max-width: 768px) {
+    .parallax-bg,
+    .about-new-parallax-bg {
+        background-attachment: scroll;
+        transform: none !important;
+    }
+}
+
+
+
+
+/* Дополнение к существующим стилям для исправления отображения фона */
+.detail-hero {
+    background-size: cover !important;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Убираем дублирование и обеспечиваем правильное отображение */
+.detail-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.detail-content {
+    position: relative;
+    z-index: 1;
+}
+
+

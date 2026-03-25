@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>AirPlane - Откройте мир заново</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Шапка сайта -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="AirPlane Logo" class="logo-img">
+                AirPlane
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
+                <li class="nav-item"><a href="#destinations" class="nav-link">Направления</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Услуги</a></li>
+                <li class="nav-item"><a href="#testimonials" class="nav-link">Отзывы</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Блок 1: Герой-секция с параллакс эффектом -->
+        <section id="home" class="hero-parallax">
+            <div class="parallax-bg"
+                style="background-image: url('./images/заставка.png');">
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">Откройте мир с <span>AirPlane</span></h1>
+                <p class="hero-description">Мы превращаем ваши мечты о путешествиях в реальность. Откройте для себя
+                    лучшие направления по всему миру с нашими эксклюзивными предложениями.</p>
+                <button class="cta-button">Найти рейс</button>
+            </div>
+        </section>
+
+        <!-- Новый блок "О нас" с параллаксом -->
+        <section class="about-new">
+            <div class="container">
+                <div class="about-new-grid">
+                    <div class="about-new-content">
+                        <h2>Ваш надежный партнер в мире путешествий</h2>
+                        <p>AirPlane - это современная туристическая платформа, которая превращает ваши мечты о
+                            путешествиях в реальность. Мы предлагаем полный спектр услуг для комфортного и незабываемого
+                            отдыха.</p>
+                        <p>Наша миссия - сделать планирование путешествий простым, приятным и доступным для каждого. Мы
+                            сотрудничаем с лучшими авиакомпаниями, отелями и туроператорами по всему миру.</p>
+                        <p>Более 10 лет мы помогаем людям открывать новые горизонты, создавая уникальные маршруты и
+                            предоставляя эксклюзивные условия для наших клиентов.</p>
+                    </div>
+                    <div class="about-new-image-parallax">
+                        <div class="about-new-parallax-bg" style="background-image: url('./images/туристы\ в\ горах.jpg');"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Остальные секции остаются без изменений -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Почему выбирают нас?</h2>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <i class="fas fa-globe-americas"></i>
+                        <h3>Более 100 направлений</h3>
+                        <p>Мы сотрудничаем с авиакомпаниями по всему миру, чтобы предложить вам самый широкий выбор
+                            маршрутов.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-medal"></i>
+                        <h3>Лучший сервис</h3>
+                        <p>Наша команда экспертов работает 24/7, чтобы обеспечить вам безупречный опыт от бронирования
+                            до вылета.</p>
+                    </div>
+                    <div class="about-card">
+                        <i class="fas fa-tag"></i>
+                        <h3>Гарантия низкой цены</h3>
+                        <p>Мы уверены, что вы не найдете эти билеты дешевле. Нашли? Вернем разницу!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="destinations" class="destinations">
+            <div class="container">
+                <h2>Популярные направления</h2>
+                <div class="destinations-grid">
+                    <div class="destination-card">
+                        <div class="card-bg"
+                            style="background-image: url('./images/швейцария.jpeg');">
+                        </div>
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h3>Альпы, Швейцария</h3>
+                            <p>Идеальное место для любителей горнолыжного спорта и нетронутой природы.</p>
+                            <div class="card-price">от 25 000 ₽</div>
+                            <a href="alps.html" class="card-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-bg"
+                            style="background-image: url('./images/бали.png');">
+                        </div>
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h3>Бали, Индонезия</h3>
+                            <p>Тропический рай с богатой культурой, рисовыми террасами и потрясающими пляжами.</p>
+                            <div class="card-price">от 45 000 ₽</div>
+                            <a href="bali.html" class="card-button">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="destination-card">
+                        <div class="card-bg"
+                            style="background-image: url('./images/рим.png');">
+                        </div>
+                        <div class="card-overlay"></div>
+                        <div class="card-content">
+                            <h3>Колизей, Рим</h3>
+                            <p>Погрузитесь в историю Древнего Рима, исследуя его знаменитые памятники архитектуры.</p>
+                            <div class="card-price">от 30 000 ₽</div>
+                            <a href="rome.html" class="card-button">Подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2>Наши услуги</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-plane"></i>
+                        <h3>Поиск и бронирование авиабилетов</h3>
+                        <p>Быстрый поиск по сотням авиакомпаний и гибкие условия бронирования.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-hotel"></i>
+                        <h3>Подбор отелей</h3>
+                        <p>Широкий выбор отелей от эконом до люкс класса в любой точке мира.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-car"></i>
+                        <h3>Аренда автомобиля</h3>
+                        <p>Поможем найти надежный автомобиль для максимально комфортного путешествия.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <h3>Туристические страховки</h3>
+                        <p>Полис страхования выезжающих за рубеж для вашего спокойствия.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Остальные секции остаются без изменений -->
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2>Что говорят наши клиенты</h2>
+                <div class="testimonials-slider">
+                    <div class="testimonial-slide">
+                        <p>"Отличный сервис! Менеджер помог подобрать тур в короткие сроки, учли все пожелания. Отдых
+                            получился просто незабываемым!"</p>
+                        <div class="client-info">
+                            <img src="./images/анна.jpg"
+                                alt="Анна">
+                            <span>Анна, Москва</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-booking">
+            <div class="contact-bg" style="background-image: url('images/фонОбрСвязи.jpg');"></div>
+            <div class="contact-overlay"></div>
+            <div class="container">
+                <div class="contact-booking-grid">
+                    <div class="booking-form">
+                        <h2>Поиск авиабилетов</h2>
+                        <form id="flight-search">
+                            <div class="form-group">
+                                <label for="from">Откуда</label>
+                                <input type="text" id="from" placeholder="Город вылета" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="to">Куда</label>
+                                <input type="text" id="to" placeholder="Город прилёта" required>
+                            </div>
+                            <div class="form-group double">
+                                <div>
+                                    <label for="depart">Туда</label>
+                                    <input type="date" id="depart" required>
+                                </div>
+                                <div>
+                                    <label for="return">Обратно</label>
+                                    <input type="date" id="return">
+                                </div>
+                            </div>
+                            <button type="submit" class="form-button">Найти билеты</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h2>Свяжитесь с нами</h2>
+                        <p><i class="fas fa-phone"></i> +7 (495) 123-45-67</p>
+                        <p><i class="fas fa-envelope"></i> info@airplane.ru</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Москва, ул. Примерная, д. 10</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-vk"></i></a>
+                            <a href="#"><i class="fab fa-telegram"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AirPlane</div>
+                <p>Лучшие путешествия начинаются с нами. Откройте мир с AirPlane.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                    <a href="#">Помощь</a>
+                </div>
+                <div class="footer-copy">&copy; 2025 AirPlane. Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

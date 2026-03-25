@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бали, Индонезия - AirPlane</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="destination-styles.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-logo">
+                <img src="images/logo.png" alt="AirPlane Logo" class="logo-img">
+                AirPlane
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Главная</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">О нас</a></li>
+                <li class="nav-item"><a href="index.html#destinations" class="nav-link">Направления</a></li>
+                <li class="nav-item"><a href="index.html#services" class="nav-link">Услуги</a></li>
+                <li class="nav-item"><a href="index.html#testimonials" class="nav-link">Отзывы</a></li>
+                <li class="nav-item"><a href="index.html#contact" class="nav-link">Контакты</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="destination-detail">
+            <div class="detail-hero" style="background-image: url('./images/бали.png');">
+                <div class="container">
+                    <div class="detail-content">
+                        <h1>Бали, Индонезия</h1>
+                        <p class="detail-price">от 45 000 ₽</p>
+                        <a href="#booking" class="detail-button">Забронировать тур</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="detail-info">
+                    <div class="info-grid">
+                        <div class="info-main">
+                            <h2>О направлении</h2>
+                            <p>Бали — тропический рай с богатой культурой, рисовыми террасами и потрясающими пляжами. Это идеальное место для тех, кто ищет гармонию между активным отдыхом и релаксацией.</p>
+                            
+                            <h3>Что включено в тур:</h3>
+                            <ul>
+                                <li>Перелет Москва-Денпасар-Москва</li>
+                                <li>Проживание в отеле 4* с завтраками</li>
+                                <li>Экскурсия к храму Танах Лот</li>
+                                <li>Посещение рисовых террас Тегаллаланг</li>
+                                <li>Спа-процедуры с традиционным массажем</li>
+                                <li>Трансферы по программе</li>
+                                <li>Медицинская страховка</li>
+                            </ul>
+
+                            <h3>Программа тура:</h3>
+                            <div class="program-day">
+                                <h4>День 1: Прибытие на Бали</h4>
+                                <p>Трансфер из аэропорта, размещение в отеле в районе Куты, свободное время для отдыха на пляже.</p>
+                            </div>
+                            <div class="program-day">
+                                <h4>День 2: Знакомство с культурой Бали</h4>
+                                <p>Экскурсия к храму Танах Лот, посещение традиционной деревни ремесленников.</p>
+                            </div>
+                            <div class="program-day">
+                                <h4>День 3: Рисовые террасы и водопады</h4>
+                                <p>Путешествие к рисовым террасам Тегаллаланг, посещение водопада Тегенунган.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-sidebar">
+                            <div class="booking-box" id="booking">
+                                <h3>Бронирование тура</h3>
+                                <form class="booking-form" data-base-price="45000">
+                                    <div class="form-group">
+                                        <label for="departure-date">Дата вылета</label>
+                                        <input type="date" id="departure-date" required>
+                                        <small class="date-error">Дата должна быть между 2025 и 2035 годом</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="people-count">Количество человек</label>
+                                        <select id="people-count">
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="room-type">Тип номера</label>
+                                        <select id="room-type">
+                                            <option value="standard">Стандарт</option>
+                                            <option value="comfort">Комфорт</option>
+                                            <option value="luxury">Люкс</option>
+                                        </select>
+                                    </div>
+                                    <div class="price-summary">
+                                        <p>Итоговая стоимость: <span id="total-price">45 000 ₽</span></p>
+                                    </div>
+                                    <button type="submit" class="form-button">Забронировать тур</button>
+                                </form>
+                                <div id="booking-message"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">AirPlane</div>
+                <p>Лучшие путешествия начинаются с нами. Откройте мир с AirPlane.</p>
+                <div class="footer-links">
+                    <a href="#">Политика конфиденциальности</a>
+                    <a href="#">Условия использования</a>
+                    <a href="#">Помощь</a>
+                </div>
+                <div class="footer-copy">&copy; 2025 AirPlane. Все права защищены.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="booking.js"></script>
+</body>
+</html>
